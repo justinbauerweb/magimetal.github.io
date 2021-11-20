@@ -22,7 +22,11 @@
 	</div>
 </main>
 
-<style>
+<style global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
 	.app-wrapper {
 		width: 100%;
 		display: flex;
