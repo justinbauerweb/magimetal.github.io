@@ -23,5 +23,9 @@
 </main>
 
 <style>
-
+	.app-wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
 </style>
