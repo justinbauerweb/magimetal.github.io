@@ -3,11 +3,23 @@
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
-
 	<title>Stay Unlocked!</title>
-<!--	<link rel='icon' type='image/png' href='./favicon.png'>-->
+	<script type='application/javascript'>
+		document.addEventListener('DOMContentLoaded', (e) => {
+			navigator.wakeLock.request('screen').then((res) => {
+				console.log('display lock acquired', res);
+			});
+		})
+	</script>
 </head>
 
 <body>
+<h1>Stay Unlocked</h1>
+<h3>Requirements:</h3>
+<ul>
+	<li>This page must be in a window by itself, no other tabs</li>
+	<li>This does not currently work if you're running a laptop on battery</li>
+	<li>Does not work in <a href='https://developer.mozilla.org/en-US/docs/Web/API/WakeLock#browser_compatibility' target='_blank'>Safari</a></li>
+</ul>
 </body>
 </html>
