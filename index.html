@@ -33,6 +33,11 @@
 		p {
 			line-height: 1.5em;
 			font-size: 18px;
+			text-align: left;
+		}
+
+		p.center {
+			text-align: center;
 		}
 
 		h1, h2 {
@@ -46,6 +51,7 @@
 
 		ul {
 			list-style-type: none;
+			margin-bottom: 48px;
 		}
 
 		li {
@@ -79,11 +85,21 @@
 <body>
 <h1>Stay Unlocked</h1>
 <p>
-	Keep this website open in a separate window to prevent your machine from going to sleep. This can primarily be used
-	for work environments where you want to be able to monitor something on a machine that you can't change the sleep
-	settings on, without having to remember to keep moving the mouse so you don't have to login again.  This is not intended
-	to be used to prevent an actual "idle" state, it only prevents sleep - <strong>DO YOUR WORK!</strong>
+	Keep this website open in a separate window to prevent your machine from going to sleep.
 </p>
+<br/>
+<p>
+	This can primarily be used for work environments where you want to be able to monitor something on a machine (like Teams Chat or Slack), but you can't change the sleep settings on the machine. There are probably a bunch of other viable uses as well, but this was my primary use-case.
+</p>
+<br/>
+<p>
+	This is <strong><u>not</u></strong> intended to be used to prevent an actual "idle" state, or fake use activity - it simply prevents your machine from going to sleep.<br/>
+</p>
+<br/>
+<p class='center'>
+	<strong>DO YOUR WORK!</strong>
+</p>
+
 <hr>
 <h2>Requirements</h2>
 <ul>
@@ -91,5 +107,8 @@
 	<li>This does not currently work if you're running a laptop on battery</li>
 	<li>This does not seem to work in <a href='https://developer.mozilla.org/en-US/docs/Web/API/WakeLock#browser_compatibility' target='_blank'>Safari</a></li>
 </ul>
+
+<hr>
+
 </body>
 </html>
