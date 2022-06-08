@@ -6,34 +6,61 @@
 	<title>Stay Unlocked!</title>
 
 	<style>
+		:root {
+			--blue: #00aced;
+			--white: #ffffff;
+		}
+
 		* {
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
 		}
+
 		body {
 			margin: 0 auto;
+			padding: 0 8px;
 			max-width: 640px;
 			text-align: center;
+			background-color: #000010;
+			color: var(--blue);
 		}
+
+		a {
+			color: var(--blue);
+		}
+
 		p {
 			line-height: 1.5em;
 			font-size: 18px;
 		}
+
 		h1, h2 {
 			padding: 24px 0;
+			word-break: break-word;
 		}
+
 		h1 {
-			font-size: 48px;
+			font-size: 6.25em;
 		}
+
 		ul {
 			list-style-type: none;
 		}
+
 		li {
-			margin: 4px auto;
+			margin: 8px auto;
+			font-size: 18px;
+			background-color: #0b4d75;
+			padding: 4px;
+			border-radius: 8px;
+			color: #fff;
+			width: 100%;
 		}
+
 		hr {
 			margin: 24px auto 0;
+			border: 1px solid var(--blue);
 		}
 	</style>
 	<script type='application/javascript'>
