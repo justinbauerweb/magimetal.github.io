@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+:root {
+    --blue: #00aced;
+    --mid-blue: #0b4d75;
+    --dark-blue: #000010;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 8px;
+    max-width: 640px;
+    text-align: center;
+    background-color: var(--dark-blue);
+    color: var(--blue);
+}
+
+.dark .content {
+    display: none;
+}
+
+a {
+    color: var(--blue);
+}
+
+p {
+    line-height: 1.5em;
+    font-size: 18px;
+    text-align: left;
+}
+
+p.center {
+    text-align: center;
+}
+
+h1, h2 {
+    padding: 24px 0 8px;
+    word-break: break-word;
+}
+
+h1 {
+    font-size: 5.95em;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 48px;
+}
+
+li {
+    margin: 8px auto;
+    font-size: 18px;
+    background-color: var(--mid-blue);
+    padding: 4px;
+    border-radius: 8px;
+    color: #fff;
+    width: 100%;
+}
+
+hr {
+    margin: 24px auto 0;
+    border: 1px solid var(--blue);
+}
+
+.lightbulb {
+    position: relative;
+}
+
+.lightbulb span {
+    position: absolute;
+    right: 28px;
+    top: 30px;
+    font-size: 12px;
+}
+
+label {
+    background-image: url('http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb_off.png');
+    display: block;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    position: absolute;
+    right: -4px;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+input:checked + label {
+    background-image:url('http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb.png');
+}
+
+.buttons {
+    margin: 24px 0 32px;
+}
+
+.buttons button.disable, .buttons.enabled button.enable {
+    display: none;
+}
+
+.buttons.enabled button.disable {
+    display: block;
+}
+
+button {
+    -webkit-appearance: none;
+    background-color: var(--blue);
+    color: #fff;
+    padding: 12px 24px;
+    border: 0;
+    border-radius: 8px;
+    margin: 0 auto;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--mid-blue);
+}
+
+button.disable {
+    background-color: darkred;
+}
+
+button.disable:hover {
+    background-color: red;
+}

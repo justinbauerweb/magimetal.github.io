@@ -1,114 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1'>
-	<title>Stay Unlocked!</title>
+	<head>
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width,initial-scale=1'>
+		<title>Stay Unlocked!</title>
+		<link rel='stylesheet' href='styles.css' />
 
-	<style>
-		:root {
-			--blue: #00aced;
-			--white: #ffffff;
-		}
+		<script type='application/javascript' src='scripts.js'></script>
+	</head>
 
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
+	<body>
+		<div class='lightbulb'>
+			<span>Show/Hide</span>
+			<input type="checkbox" id="bulb" onclick='toggleVisibility()' checked />
+			<label for="bulb"></label>
+		</div>
 
-		body {
-			margin: 0 auto;
-			padding: 0 8px;
-			max-width: 640px;
-			text-align: center;
-			background-color: #000010;
-			color: var(--blue);
-		}
+		<div class='content'>
+			<h1>Stay Unlocked</h1>
+			<p>
+				Keep this website open in a separate window to prevent your machine from going to sleep.
+			</p>
 
-		a {
-			color: var(--blue);
-		}
+			<br/>
+			<p>
+				This can primarily be used for work environments where you want to be able to monitor something on a machine (like Teams Chat or Slack), but you can't change the sleep settings on the machine. There are probably a bunch of other viable uses as well, but this was my primary use-case.
+			</p>
 
-		p {
-			line-height: 1.5em;
-			font-size: 18px;
-			text-align: left;
-		}
+			<br/>
+			<p>
+				This is <strong><u>not</u></strong> intended to be used to prevent an actual "idle" state, or fake use activity - it simply prevents your machine from going to sleep.<br/>
+			</p>
 
-		p.center {
-			text-align: center;
-		}
+			<br/>
+			<p class='center'>
+				<strong>DO YOUR WORK!</strong>
+			</p>
 
-		h1, h2 {
-			padding: 24px 0 8px;
-			word-break: break-word;
-		}
+			<div id='buttons' class='buttons'>
+				<button class='enable' onclick='toggleLock()'>Enable "Stay Unlocked"</button>
+				<button class='disable' onclick='toggleLock()'>Disable "Stay Unlocked"</button>
+			</div>
 
-		h1 {
-			font-size: 6.25em;
-		}
+			<hr>
+			<h2>Requirements</h2>
+			<ul>
+				<li>This page must be in a window by itself, <u>no other tabs</u></li>
+				<li>This does not currently work if you're running a laptop on battery</li>
+				<li>This does not seem to work in <a href='https://developer.mozilla.org/en-US/docs/Web/API/WakeLock#browser_compatibility' target='_blank'>Safari</a></li>
+			</ul>
 
-		ul {
-			list-style-type: none;
-			margin-bottom: 48px;
-		}
-
-		li {
-			margin: 8px auto;
-			font-size: 18px;
-			background-color: #0b4d75;
-			padding: 4px;
-			border-radius: 8px;
-			color: #fff;
-			width: 100%;
-		}
-
-		hr {
-			margin: 24px auto 0;
-			border: 1px solid var(--blue);
-		}
-	</style>
-	<script type='application/javascript'>
-		if (window.location.protocol !== 'https:') {
-			location.href = location.href.replace('http://', 'https://');
-		}
-
-		document.addEventListener('DOMContentLoaded', (e) => {
-			navigator.wakeLock.request('screen').then((res) => {
-				console.log('display lock acquired', res);
-			});
-		});
-	</script>
-</head>
-
-<body>
-<h1>Stay Unlocked</h1>
-<p>
-	Keep this website open in a separate window to prevent your machine from going to sleep.
-</p>
-<br/>
-<p>
-	This can primarily be used for work environments where you want to be able to monitor something on a machine (like Teams Chat or Slack), but you can't change the sleep settings on the machine. There are probably a bunch of other viable uses as well, but this was my primary use-case.
-</p>
-<br/>
-<p>
-	This is <strong><u>not</u></strong> intended to be used to prevent an actual "idle" state, or fake use activity - it simply prevents your machine from going to sleep.<br/>
-</p>
-<br/>
-<p class='center'>
-	<strong>DO YOUR WORK!</strong>
-</p>
-
-<hr>
-<h2>Requirements</h2>
-<ul>
-	<li>This page must be in a window by itself, <u>no other tabs</u></li>
-	<li>This does not currently work if you're running a laptop on battery</li>
-	<li>This does not seem to work in <a href='https://developer.mozilla.org/en-US/docs/Web/API/WakeLock#browser_compatibility' target='_blank'>Safari</a></li>
-</ul>
-
-<hr>
-
-</body>
+			<hr>
+		</div>
+	</body>
 </html>
