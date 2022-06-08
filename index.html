@@ -4,22 +4,65 @@
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
 	<title>Stay Unlocked!</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0 auto;
+			max-width: 640px;
+			text-align: center;
+		}
+		p {
+			line-height: 1.5em;
+			font-size: 18px;
+		}
+		h1, h2 {
+			padding: 24px 0;
+		}
+		h1 {
+			font-size: 48px;
+		}
+		ul {
+			list-style-type: none;
+		}
+		li {
+			margin: 4px auto;
+		}
+		hr {
+			margin: 24px auto 0;
+		}
+	</style>
 	<script type='application/javascript'>
+		if (window.location.protocol !== 'https') {
+			// location.href = location.href.replace('http://', 'https://');
+		}
+
 		document.addEventListener('DOMContentLoaded', (e) => {
 			navigator.wakeLock.request('screen').then((res) => {
 				console.log('display lock acquired', res);
 			});
-		})
+		});
 	</script>
 </head>
 
 <body>
 <h1>Stay Unlocked</h1>
-<h3>Requirements:</h3>
+<p>
+	Keep this website open in a separate window to prevent your machine from going to sleep. This can primarily be used
+	for work environments where you want to be able to monitor something on a machine that you can't change the sleep
+	settings on, without having to remember to keep moving the mouse so you don't have to login again.  This is not intended
+	to be used as a device that prevents an actual "idle" state, it only prevents sleep - <strong>DO YOUR WORK!</strong>
+</p>
+<hr>
+<h2>Requirements</h2>
 <ul>
-	<li>This page must be in a window by itself, no other tabs</li>
+	<li>This page must be in a window by itself, <u>no other tabs</u></li>
 	<li>This does not currently work if you're running a laptop on battery</li>
-	<li>Does not work in <a href='https://developer.mozilla.org/en-US/docs/Web/API/WakeLock#browser_compatibility' target='_blank'>Safari</a></li>
+	<li>This does not seem to work in <a href='https://developer.mozilla.org/en-US/docs/Web/API/WakeLock#browser_compatibility' target='_blank'>Safari</a></li>
 </ul>
 </body>
 </html>
