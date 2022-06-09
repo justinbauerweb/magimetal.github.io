@@ -1,9 +1,18 @@
 const WAKELOCK_TARGET = 'screen';
 const WAKELOCK_KEEPALIVE_TIMEOUT = 60000;
+
 let checked = true;
 let locked = false;
 let wakeLock;
 let interval;
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('visibilitychange', async () => {
+    if (!wakeLock && locked) {
+      await acquireLock();
+    }
+  })
+});
 
 if (window.location.protocol !== 'https:') {
   location.href = location.href.replace('http://', 'https://');
