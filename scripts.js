@@ -72,7 +72,7 @@ const acquireLock = async () => {
 const releaseLock = async () => {
   document.getElementById('buttons').classList.remove('enabled');
 
-  if (video) video.stop();
+  if (video) video.pause();
   wakeLock = await wakeLock.release(WAKELOCK_TARGET);
   console.info('wakeLock released');
 
