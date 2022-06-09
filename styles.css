@@ -16,15 +16,22 @@ body.dark #content .main {
     padding: var(--spacing-small);
 }
 
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-medium);
+}
+
 #buttons {
-    margin: 0 auto;
+    display: flex;
 }
 
 #buttons button {
     padding: var(--spacing-small) var(--spacing-medium);
-    margin-bottom: var(--spacing-medium);
     color: var(--white);
     background-color: var(--blue);
+    width: 228px;
 }
 
 #buttons button:hover {
@@ -48,22 +55,13 @@ body.dark #content .main {
     background-color: var(--red);
 }
 
-/*@media screen and (max-width: 660px) {*/
-/*    body {*/
-/*        padding-bottom: 24px;*/
-/*    }*/
-/*    h1 {*/
-/*        font-size: 2.35em;*/
-/*    }*/
-/*    p {*/
-/*        font-size: 0.9em;*/
-/*        padding-left: 18px;*/
-/*        padding-right: 18px;*/
-/*    }*/
-/*    ul {*/
-/*        margin: 0 18px;*/
-/*    }*/
-/*    li {*/
-/*        font-size: 0.9em;*/
-/*    }*/
-/*}*/
+@media screen and (max-width: 660px) {
+    #header {
+        flex-direction: column;
+    }
+
+    #header #buttons {
+        margin-top: var(--spacing-small);
+        margin-left: var(--spacing-huge);
+    }
+}

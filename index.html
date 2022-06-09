@@ -14,42 +14,35 @@
 
 	<body>
 		<div id='content'>
-			<div id='lightbulb'>
-				<input type="checkbox" id="bulb" onclick='toggleVisibility()' checked />
-				<label for="bulb"></label>
-			</div>
-			<div class='main'>
+			<div id='header'>
 				<h1>Stay Unlocked</h1>
-				<p>
-					Keep this website open in a separate window to prevent your machine from going to sleep.
-				</p>
-
-				<p>
-					This can primarily be used for work environments where you want to be able to monitor something on a machine (like Teams Chat or Slack), but you can't change the sleep settings on the machine. There are probably a bunch of other viable uses as well, but this was my primary use-case.
-				</p>
-
-				<p>
-					This is <strong><u>not</u></strong> intended to be used to prevent an actual "idle" state, or fake use activity - it simply prevents your machine from going to sleep.<br/>
-				</p>
-
-				<p class='center'>
-					<strong>DO YOUR WORK!</strong>
-				</p>
-
-				<div id='buttons' class='text-center'>
+				<div id='buttons'>
+					<div id='lightbulb'>
+						<input type="checkbox" id="bulb" onclick='toggleVisibility()' checked />
+						<label for="bulb"></label>
+					</div>
 					<button class='enable' onclick='toggleLock()'>Enable "Stay Unlocked"</button>
 					<button class='disable' onclick='toggleLock()'>Disable "Stay Unlocked"</button>
 				</div>
-
-				<hr>
-				<h2>Requirements</h2>
-				<ul>
-					<li>This page must be in a window by itself, <u>no other tabs</u></li>
-					<li>This does not currently work if you're running a laptop on battery</li>
-					<li>This does not seem to work in <a href='https://developer.mozilla.org/en-US/docs/Web/API/WakeLock#browser_compatibility' target='_blank'>Safari</a></li>
-				</ul>
-
-				<hr>
+			</div>
+			<div class='main'>
+				<p>
+					This website helps a user prevent their machine's display from going to sleep. It does not generate "activity",
+					but rather acts like you're playing a fullscreen video (even though you're not).
+				</p>
+				<p>
+					Users can continue to who work on multiple machines at once without missing important emails or messages from other Communication Software (Microsoft Teams,
+					Slack, Discord, Mattermost).
+				</p>
+				<p class='text-white'>
+					You must keep this website open in a
+						<u><span onclick='window.open(window.location.href, "StayUnlocked", "width=380,height=740");'>separate window</span></u>
+					for the functionality to work, it can't be in a tab in the background or minimized.
+				</p>
+				<hr />
+				<p class='text-center'>
+					<a href="https://www.buymeacoffee.com/magimetal"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=magimetal&button_colour=00aced&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
+				</p>
 			</div>
 		</div>
 	</body>

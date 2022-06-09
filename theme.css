@@ -11,7 +11,7 @@ hr {
     border-bottom: 0;
     border-style: solid;
     border-color: var(--blue);
-    margin: var(--spacing-small) 0;
+    margin: var(--spacing-huge) 0;
 }
 
 button {
@@ -37,6 +37,11 @@ p {
     margin-bottom: var(--spacing-medium);
 }
 
+p span {
+    color: var(--white);
+    cursor: pointer;
+}
+
 .text-left {
     text-align: left;
 }
@@ -47,4 +52,8 @@ p {
 
 .text-right {
     text-align: right;
+}
+
+.text-white {
+    color: var(--white);
 }
