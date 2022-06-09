@@ -4,53 +4,53 @@
 		<meta charset='utf-8'>
 		<meta name='viewport' content='width=device-width,initial-scale=1'>
 		<title>Stay Unlocked!</title>
+		<link rel='stylesheet' href='variables.css' />
+		<link rel='stylesheet' href='theme.css' />
 		<link rel='stylesheet' href='styles.css' />
+		<link rel='stylesheet' href='lightbulb.css' />
 
 		<script type='application/javascript' src='scripts.js'></script>
 	</head>
 
 	<body>
-		<div class='lightbulb'>
-			<span>Show/Hide</span>
-			<input type="checkbox" id="bulb" onclick='toggleVisibility()' checked />
-			<label for="bulb"></label>
-		</div>
-
-		<div class='content'>
-			<h1>Stay Unlocked</h1>
-			<p>
-				Keep this website open in a separate window to prevent your machine from going to sleep.
-			</p>
-
-			<br/>
-			<p>
-				This can primarily be used for work environments where you want to be able to monitor something on a machine (like Teams Chat or Slack), but you can't change the sleep settings on the machine. There are probably a bunch of other viable uses as well, but this was my primary use-case.
-			</p>
-
-			<br/>
-			<p>
-				This is <strong><u>not</u></strong> intended to be used to prevent an actual "idle" state, or fake use activity - it simply prevents your machine from going to sleep.<br/>
-			</p>
-
-			<br/>
-			<p class='center'>
-				<strong>DO YOUR WORK!</strong>
-			</p>
-
-			<div id='buttons' class='buttons'>
-				<button class='enable' onclick='toggleLock()'>Enable "Stay Unlocked"</button>
-				<button class='disable' onclick='toggleLock()'>Disable "Stay Unlocked"</button>
+		<div id='content'>
+			<div id='lightbulb'>
+				<input type="checkbox" id="bulb" onclick='toggleVisibility()' checked />
+				<label for="bulb"></label>
 			</div>
+			<div class='main'>
+				<h1>Stay Unlocked</h1>
+				<p>
+					Keep this website open in a separate window to prevent your machine from going to sleep.
+				</p>
 
-			<hr>
-			<h2>Requirements</h2>
-			<ul>
-				<li>This page must be in a window by itself, <u>no other tabs</u></li>
-				<li>This does not currently work if you're running a laptop on battery</li>
-				<li>This does not seem to work in <a href='https://developer.mozilla.org/en-US/docs/Web/API/WakeLock#browser_compatibility' target='_blank'>Safari</a></li>
-			</ul>
+				<p>
+					This can primarily be used for work environments where you want to be able to monitor something on a machine (like Teams Chat or Slack), but you can't change the sleep settings on the machine. There are probably a bunch of other viable uses as well, but this was my primary use-case.
+				</p>
 
-			<hr>
+				<p>
+					This is <strong><u>not</u></strong> intended to be used to prevent an actual "idle" state, or fake use activity - it simply prevents your machine from going to sleep.<br/>
+				</p>
+
+				<p class='center'>
+					<strong>DO YOUR WORK!</strong>
+				</p>
+
+				<div id='buttons' class='text-center'>
+					<button class='enable' onclick='toggleLock()'>Enable "Stay Unlocked"</button>
+					<button class='disable' onclick='toggleLock()'>Disable "Stay Unlocked"</button>
+				</div>
+
+				<hr>
+				<h2>Requirements</h2>
+				<ul>
+					<li>This page must be in a window by itself, <u>no other tabs</u></li>
+					<li>This does not currently work if you're running a laptop on battery</li>
+					<li>This does not seem to work in <a href='https://developer.mozilla.org/en-US/docs/Web/API/WakeLock#browser_compatibility' target='_blank'>Safari</a></li>
+				</ul>
+
+				<hr>
+			</div>
 		</div>
 	</body>
 </html>

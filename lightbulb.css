@@ -1,0 +1,25 @@
+#lightbulb {
+    position: relative;
+}
+
+#lightbulb span {
+    position: absolute;
+}
+
+#lightbulb label {
+    background-image: url('http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb_off.png');
+    display: block;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+#lightbulb input[type='checkbox'] {
+    -webkit-appearance: none;
+}
+
+#lightbulb input:checked + label {
+    background-image:url('http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb.png');
+}
