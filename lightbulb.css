@@ -3,7 +3,7 @@
 }
 
 #lightbulb label {
-    background-image: url('http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb_off.png');
+    background-image: url('https://images.freeimages.com/fic/images/icons/1588/farm_fresh_web/32/lightbulb_off.png');
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -17,5 +17,5 @@
 }
 
 #lightbulb input:checked + label {
-    background-image:url('http://png.findicons.com/files/icons/1588/farm_fresh_web/32/lightbulb.png');
+    background-image:url('https://images.freeimages.com/fic/images/icons/1588/farm_fresh_web/32/lightbulb.png');
 }
