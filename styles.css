@@ -50,18 +50,3 @@ h2 {
 #buttons button:hover {
     background-color: #000;
 }
-
-#buttons.enabled button.enable {
-    display: none;
-}
-
-@media screen and (max-width: 660px) {
-    #header {
-        flex-direction: column;
-    }
-
-    #header #buttons {
-        margin-top: var(--spacing-small);
-        margin-left: var(--spacing-huge);
-    }
-}
