@@ -15,7 +15,7 @@ hr {
 }
 
 button {
-    -webkit-appearance: none;
+    appearance: none;
     border: 0;
     border-radius: var(--border-radius);
     cursor: pointer;

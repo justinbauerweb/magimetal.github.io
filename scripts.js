@@ -30,16 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 if (window.location.protocol !== 'https:') {
-  location.href = location.href.replace('http://', 'https://');
-}
-
-const toggleVisibility = () => {
-  checked = !checked;
-  if (!checked) {
-    document.body.classList.add('dark');
-  } else {
-    document.body.classList.remove('dark');
-  }
+  // location.href = location.href.replace('http://', 'https://');
 }
 
 const toggleLock = async () => {
@@ -60,7 +51,6 @@ const acquireLock = async () => {
   if (video) video.play();
   wakeLock = await navigator.wakeLock.request(WAKELOCK_TARGET);
   console.info('wakeLock acquired', wakeLock);
-  document.getElementById('buttons').classList.add('enabled');
 
   interval = setInterval(async () => {
     if (video) video.play();
@@ -70,7 +60,6 @@ const acquireLock = async () => {
 }
 
 const releaseLock = async () => {
-  document.getElementById('buttons').classList.remove('enabled');
 
   if (video) video.pause();
   wakeLock = await wakeLock.release(WAKELOCK_TARGET);
@@ -79,3 +68,7 @@ const releaseLock = async () => {
   clearInterval(interval);
   interval = null;
 }
+
+(() => {
+  toggleLock();
+})();
